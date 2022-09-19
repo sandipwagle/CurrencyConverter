@@ -1,0 +1,15 @@
+//
+//  Config.xcconfig
+//  CurrencyConverter
+//
+//  Created by rabin on 20/07/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = CurrencyConverter
+BUNDLE_IDENTIFIER = com.pun.rabin.CurrencyConverter
+APP_VERSION = 1.0
+BASE_URL = https:/$()/openexchangerates.org/api/
+OPEN_EXCHANGE_API_KEY = bb075270c40a433298c28a4856e77832

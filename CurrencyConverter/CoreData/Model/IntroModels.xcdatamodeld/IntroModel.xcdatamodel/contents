@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBIntroInterest" representedClassName="DBIntroInterest" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="introUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBIntroUser" inverseName="interests" inverseEntity="DBIntroUser"/>
+    </entity>
+    <entity name="DBIntroUser" representedClassName="DBIntroUser" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="profileImageUrl" optional="YES" attributeType="String"/>
+        <relationship name="interests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBIntroInterest" inverseName="introUser" inverseEntity="DBIntroInterest"/>
+        <relationship name="introVideo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBIntroVideo" inverseName="introUser" inverseEntity="DBIntroVideo"/>
+    </entity>
+    <entity name="DBIntroVideo" representedClassName="DBIntroVideo" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hide" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="musicId" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
+        <relationship name="introUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBIntroUser" inverseName="introVideo" inverseEntity="DBIntroUser"/>
+    </entity>
+    <entity name="Gender" representedClassName=".Gender" syncable="YES" codeGenerationType="category">
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="objectId" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="objectId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Interest" representedClassName=".Interest" syncable="YES" codeGenerationType="category">
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="objectId" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="objectId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="InterestedIn" representedClassName=".InterestedIn" syncable="YES" codeGenerationType="category">
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="objectId" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="objectId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES" codeGenerationType="category">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="objectId" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="objectId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Token" representedClassName="Token" syncable="YES">
+        <attribute name="accessToken" optional="YES" attributeType="String"/>
+        <attribute name="accessTokenExpiresIn" optional="YES" attributeType="String"/>
+        <attribute name="refreshToken" optional="YES" attributeType="String"/>
+        <attribute name="refreshTokenExpiresIn" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES" codeGenerationType="category">
+        <attribute name="bio" optional="YES" attributeType="String"/>
+        <attribute name="contactNumber" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="hasProfileCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isLoggedIn" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="objectId" optional="YES" attributeType="String"/>
+        <attribute name="profileImage" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="objectId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="DBIntroInterest" positionX="-18" positionY="117" width="128" height="89"/>
+        <element name="DBIntroUser" positionX="-27" positionY="99" width="128" height="149"/>
+        <element name="DBIntroVideo" positionX="-36" positionY="90" width="128" height="194"/>
+        <element name="Gender" positionX="-36" positionY="54" width="128" height="104"/>
+        <element name="Interest" positionX="-54" positionY="36" width="128" height="104"/>
+        <element name="InterestedIn" positionX="-18" positionY="72" width="128" height="104"/>
+        <element name="Location" positionX="-36" positionY="81" width="128" height="104"/>
+        <element name="Token" positionX="-18" positionY="108" width="128" height="89"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="224"/>
+    </elements>
+</model>

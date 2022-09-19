@@ -15,5 +15,5 @@ I built this app to demonstrate the use of clean architecture following the MVVM
 
 ## Author
 
-Rabin Pun
-[Er. Rabin Pun](https://www.linkedin.com/in/er-rabin-pun-671ba7157/)
+Sandip Wagle
+[Sandip Wagle](https://www.linkedin.com/in/sandip-wagle-71b79710b/)
